@@ -96,7 +96,7 @@ export function SiteHeader() {
 
       {/* Editorial Mobile Menu Drawer */}
       {open && (
-        <div className="fixed inset-0 bg-[#F5F2EA] z-[60] xl:hidden flex flex-col justify-between overflow-y-auto">
+        <div className="fixed inset-0 min-h-screen bg-[#F5F2EA] z-[100] xl:hidden overflow-y-auto shadow-2xl">
           <div className="container-grid py-4">
             <div className="flex h-16 items-center justify-between border-b border-[#D4CEBF]">
               <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
@@ -123,7 +123,7 @@ export function SiteHeader() {
             </div>
 
             {/* Mobile Nav Links */}
-            <nav className="py-8 divide-y divide-[#D4CEBF]">
+            <nav className="py-4 divide-y divide-[#D4CEBF]">
               {mainNav.map((item, index) => {
                 const isActive = pathname === item.href;
                 return (
@@ -131,14 +131,14 @@ export function SiteHeader() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className={`flex items-center justify-between py-5 group ${
+                    className={`grid grid-cols-[2rem_minmax(0,1fr)_2rem] items-center gap-3 py-3 group ${
                       isActive ? 'text-[#315F9F]' : 'text-[#071A33]'
                     }`}
                   >
                     <span className="mono text-xs text-[#071A33]/40">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="display text-3xl sm:text-4xl font-medium tracking-tight group-hover:translate-x-1 transition-transform">
+                    <span className="display text-xl sm:text-3xl font-medium tracking-tight group-hover:translate-x-1 transition-transform">
                       {item.label}
                     </span>
                     <ArrowUpRight size={24} className="text-[#315F9F] opacity-70 group-hover:opacity-100" />
