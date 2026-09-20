@@ -1,4 +1,4 @@
-export const nav=[['About','/about'],['People','/people'],['Events','/events'],['Placements','/placements'],['Alumni','/alumni'],['Hall of Fame','/hall-of-fame'],['Activity Logger','/logger'],['Notifications','/notifications']] as const;
+export const nav=[['About','/about'],['People','/people'],['Events','/events'],['Placements','/placements'],['Alumni','/alumni'],['Hall of Fame','/hall-of-fame'],['Notifications','/notifications']] as const;
 export const stats=[['01','Student association'],['12+','Years of student-led work'],['30+','Annual activities'],['92%','Placement rate · mock data']];
 export const announcements=[
 {date:'13 SEP 2026',tag:'EVENT',title:'SAIT Website Redesign Challenge is now open'},
